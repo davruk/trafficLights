@@ -1,0 +1,51 @@
+.light-container {
+  background-image: url(https://i.postimg.cc/rmDtJD3k/light2.jpg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  width: 200px;
+  height: 235px;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.lights {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 1.7em;
+}
+
+.light {
+  border-radius: 50%;
+  width: 59px;
+  height: 57px;
+  transition: 0.5s background-color ease-in-out;
+  background-color: #333;
+}
+
+.light:not(:last-child) {
+  margin-bottom: 0.85em;
+}
+
+.lights.stop .light.red {
+  background-color: red;
+}
+
+.lights.slow .light.yellow {
+  background-color: yellow;
+}
+
+.lights.go .light.green {
+  background-color: green;
+}
+
+.lights.off .light {
+  background-color: #333;
+}
+
+.change-light {
+  font-size: 1.2rem;
+}
